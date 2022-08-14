@@ -1,7 +1,6 @@
 import React from "react";
 import Input from "./Input";
 import Current from "./Current";
-import Weather from "./Weather";
 
 import "./App.css";
 

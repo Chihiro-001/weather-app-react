@@ -1,38 +1,47 @@
-.App {
+body {
+  font-family: "Secular One", sans-serif;
+  color: white;
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.weather-app {
+  background: #887575;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 750px;
+}
+.today {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.align-items-end {
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-forecast-icon {
+  max-width: 50%;
+}
+.weather-forecast-temp-min {
+  opacity: 70%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.github-link {
+  color: #887575;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 750px;
+  display: block;
 }

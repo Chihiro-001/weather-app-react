@@ -20,3 +20,21 @@
   text-align: right;
   padding: 0 30px;
 }
+.current-temperature {
+  font-size: 35px;
+  font-weight: normal;
+  position: relative;
+}
+.unit {
+  position: relative;
+  top: -12px;
+}
+.current-temperature {
+  font-size: 35px;
+  font-weight: normal;
+  position: relative;
+}
+.unit {
+  position: relative;
+  top: -12px;
+}

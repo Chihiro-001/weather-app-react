@@ -1,4 +1,6 @@
 import React from "react";
+import Input from "./Input";
+import Current from "./Current";
 import Weather from "./Weather";
 
 import "./App.css";
@@ -6,20 +8,10 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Weather city="Tokyo" />
-      </header>
+      <div class="weather-app today">
+        <Input />
+        <Current />
+      </div>
     </div>
   );
 }

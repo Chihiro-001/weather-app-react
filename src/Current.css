@@ -1,0 +1,22 @@
+.current-weather-icon {
+  position: relative;
+  top: -25px;
+  left: 20px;
+}
+.align-items-start,
+.weather-detail {
+  font-size: 18px;
+}
+.active {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
+}
+
+.current-location-info {
+  text-align: right;
+  padding: 0 30px;
+}

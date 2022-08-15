@@ -7,9 +7,11 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div class="weather-app today">
-        <Input />
-        <Current />
+      <div class="container">
+        <div class="weather-app today">
+          <Input />
+          <Current />
+        </div>
       </div>
     </div>
   );

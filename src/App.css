@@ -37,7 +37,8 @@ ul {
   opacity: 70%;
 }
 
-.github-link {
+footer {
+  font-size: 15px;
   color: #887575;
   margin: 0 auto;
   margin-top: 20px;

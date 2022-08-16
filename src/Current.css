@@ -1,40 +1,31 @@
-.current-weather-icon {
+.Current img {
   position: relative;
   top: -25px;
   left: 20px;
 }
-.align-items-start,
-.weather-detail {
+.Current .align-items-start,
+.Current .weather-detail {
   font-size: 18px;
 }
-.active {
+.Current .active {
   color: white;
   cursor: default;
   text-decoration: none;
 }
-.active:hover {
+.Current .active:hover {
   text-decoration: none;
 }
 
-.current-location-info {
+.Current .current-location-info {
   text-align: right;
   padding: 0 30px;
 }
-.current-temperature {
+.Current .current-temperature {
   font-size: 35px;
   font-weight: normal;
   position: relative;
 }
-.unit {
-  position: relative;
-  top: -12px;
-}
-.current-temperature {
-  font-size: 35px;
-  font-weight: normal;
-  position: relative;
-}
-.unit {
+.Current small {
   position: relative;
   top: -12px;
 }

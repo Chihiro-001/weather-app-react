@@ -1,3 +1,4 @@
+/* body is for entire html included. */
 body {
   font-family: "Secular One", sans-serif;
   color: white;
@@ -9,21 +10,27 @@ body {
   );
 }
 
-ul {
+.App ul {
   list-style: none;
   padding: 0;
 }
+.App footer {
+  font-size: 15px;
+  color: #887575;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 750px;
+  display: block;
+}
 
-.weather-app {
+.App .today {
   background: #887575;
   border-radius: 20px;
-  margin: 0 auto;
+  margin: 80px auto 20px;
   width: 750px;
 }
-.today {
-  margin-top: 80px;
-  margin-bottom: 20px;
-}
+/* CSS for 6 days of weather forecast */
 .align-items-end {
   margin: 0 auto;
   padding-top: 25px;
@@ -35,14 +42,4 @@ ul {
 }
 .weather-forecast-temp-min {
   opacity: 70%;
-}
-
-footer {
-  font-size: 15px;
-  color: #887575;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 750px;
-  display: block;
 }

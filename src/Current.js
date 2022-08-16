@@ -1,7 +1,16 @@
 import React from "react";
+import axios from "axios";
 import "./Current.css";
 
 export default function Current() {
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+  const city = "Tokyo";
+  const apiKey = "7b2471b32a9aba35093d93a82db55ee8";
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&
+  units= metric`;
+  axios.get(apiUrl).then(handleResponse);
   return (
     <div className="Current">
       <div className="row align-items-start">

@@ -9,12 +9,12 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div class="weather-app today">
+        <div className="weather-app today">
           <Input />
           <Current />
         </div>
       </div>
-      <footer class="github-link">
+      <footer className="github-link">
         Thank you for visiting my React.js weather app!
         <div>
           This project was coded by Chihiro Ismail, and is

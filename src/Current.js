@@ -11,20 +11,30 @@ export default function Current() {
     setWeatherDate({
       loaded: true,
       temperature: response.data.main.temp,
+      date: "Wednesday, 15:00",
       wind: response.data.wind.speed,
       cloudiness: response.data.clouds.all,
       humidity: response.data.main.humidity,
-      updatedDate: response.data.lastupdate.value,
     });
   }
   if (weatherData.loaded) {
     return (
       <div className="Current">
         <div className="row align-items-start">
-          <div class="col-2">
+          <div className="col current-location-info">
+            {/* Current location */}
+            <ul>
+              <li className="current-location">Tokyo</li>
+              <li>
+                Date/Time: <span>{weatherData.date}</span>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+          <div className="col-2">
             <img
               src="https://openweathermap.org/img/wn/10d@2x.png"
-              class="current-weather-icon"
+              className="current-weather-icon"
               alt="current weather icon"
             />
           </div>
@@ -39,7 +49,7 @@ export default function Current() {
               </small>
             </div>
           </div>
-          <div className="col-3 weather-detail">
+          <div className="col weather-detail">
             {/* Current Weather Detail */}
             <ul>
               <li className="wind">
@@ -49,18 +59,8 @@ export default function Current() {
                 Cloudiness: <span>{weatherData.cloudiness}</span> %
               </li>
               <li className="humidity">
-                Humidity:<span>{weatherData.humidity}</span> %
+                Humidity: <span>{weatherData.humidity}</span> %
               </li>
-            </ul>
-          </div>
-          <div className="col current-location-info">
-            {/* Current location */}
-            <ul>
-              <li className="current-location">Tokyo</li>
-              <li>
-                Time: <span>{weatherData.lastupdate}</span>
-              </li>
-              <li></li>
             </ul>
           </div>
         </div>

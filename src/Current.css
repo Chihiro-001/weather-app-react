@@ -15,7 +15,9 @@
 .Current .active:hover {
   text-decoration: none;
 }
-
+.Current .current-location {
+  font-size: 30px;
+}
 .Current .current-location-info {
   text-align: right;
   padding: 0 30px;

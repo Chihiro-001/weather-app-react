@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Current.css";
+import FormattedDate from "./FormattedDate";
 import { SpinnerCircular } from "spinners-react";
 
 export default function Current() {
@@ -12,7 +13,7 @@ export default function Current() {
     setWeatherDate({
       loaded: true,
       temperature: response.data.main.temp,
-      date: "Wednesday, 15:00",
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       cloudiness: response.data.clouds.all,
       humidity: response.data.main.humidity,
@@ -27,7 +28,10 @@ export default function Current() {
             <ul>
               <li className="current-location">Tokyo</li>
               <li>
-                Date/Time: <span>{weatherData.date}</span>
+                Date/Time:{" "}
+                <span>
+                  <FormattedDate date={weatherData.date} />
+                </span>
               </li>
               <li></li>
             </ul>

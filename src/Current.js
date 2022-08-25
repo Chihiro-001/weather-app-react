@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import CurrentWeatherInfo from "./CurrentWeatherInfo";
 import axios from "axios";
 import "./Current.css";
 import { SpinnerCircular } from "spinners-react";
-import CurrentWeatherInfo from "./CurrentWeatherInfo";
 
 export default function Current(props) {
   const [weatherData, setWeatherDate] = useState({ loaded: false });
@@ -45,12 +45,9 @@ export default function Current(props) {
                 type="text"
                 className="form-control"
                 placeholder="Enter a city"
-              />
-              <button
-                className="btn btn-outline-secondary"
-                type="button"
                 onChange={handleCityChange}
-              >
+              />
+              <button className="btn btn-outline-secondary" type="button">
                 <i className="fa-solid fa-magnifying-glass"></i>
               </button>
               <button className="btn btn-outline-secondary" type="button">

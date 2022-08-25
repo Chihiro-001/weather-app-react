@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Current.css";
+import { SpinnerCircular } from "spinners-react";
 
 export default function Current() {
   const [temperature, setTemperature] = useState(null);
@@ -71,6 +72,15 @@ export default function Current() {
     const apiKey = "7b2471b32a9aba35093d93a82db55ee8";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-    return <div className="Current">Loading...</div>;
+    return (
+      <div className="Current">
+        <span className="loading">
+          Loading...
+          <div className="spin">
+            <SpinnerCircular color="#ff847c" size="60" />
+          </div>
+        </span>
+      </div>
+    );
   }
 }

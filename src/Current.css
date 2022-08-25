@@ -31,3 +31,8 @@
   position: relative;
   top: -12px;
 }
+.Current .loading,
+.Current .spin {
+  margin: 20px;
+  margin-left: 334px;
+}

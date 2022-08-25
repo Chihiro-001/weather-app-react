@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import Icons from "./Icons";
 import "./CurrentWeatherInfo.css";
 
 export default function CurrentWeatherInfo(props) {
@@ -13,18 +14,14 @@ export default function CurrentWeatherInfo(props) {
             <li>
               Date/Time:{" "}
               <span>
-                <FormattedDate date={props.data.date} />
+                <FormattedDate date={props.data.date} size={50} />
               </span>
             </li>
             <li></li>
           </ul>
         </div>
         <div className="col-2">
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            className="current-weather-icon"
-            alt="current weather icon"
-          />
+          <Icons code={props.data.icon} />
         </div>
         <div className="col-2">
           {/* Current temperature */}

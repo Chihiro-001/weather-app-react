@@ -18,6 +18,7 @@ export default function Current(props) {
       cloudiness: response.data.clouds.all,
       humidity: response.data.main.humidity,
       city: response.data.name,
+      icon: response.data.weather[0].icon,
     });
   }
 

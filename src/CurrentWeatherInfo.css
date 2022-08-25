@@ -1,8 +1,3 @@
-.CurrentWeatherInfo img {
-  position: relative;
-  top: -25px;
-  left: 20px;
-}
 .CurrentWeatherInfo .align-items-start,
 .CurrentWeatherInfo .weather-detail {
   font-size: 18px;

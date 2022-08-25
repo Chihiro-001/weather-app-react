@@ -1,5 +1,4 @@
 import React from "react";
-import Input from "./Input";
 import Current from "./Current";
 import "./App.css";
 
@@ -10,8 +9,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="weather-app today">
-          <Input />
-          <Current />
+          <Current defaultCity="Tokyo" />
         </div>
       </div>
       <footer className="github-link">

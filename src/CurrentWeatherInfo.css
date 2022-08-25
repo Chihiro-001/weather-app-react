@@ -1,0 +1,33 @@
+.CurrentWeatherInfo img {
+  position: relative;
+  top: -25px;
+  left: 20px;
+}
+.CurrentWeatherInfo .align-items-start,
+.CurrentWeatherInfo .weather-detail {
+  font-size: 18px;
+}
+.CurrentWeatherInfo .active {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+.CurrentWeatherInfo .active:hover {
+  text-decoration: none;
+}
+.CurrentWeatherInfo .current-location {
+  font-size: 30px;
+}
+.CurrentWeatherInfo .current-location-info {
+  text-align: right;
+  padding: 0 30px;
+}
+.CurrentWeatherInfo .current-temperature {
+  font-size: 35px;
+  font-weight: normal;
+  position: relative;
+}
+.CurrentWeatherInfo small {
+  position: relative;
+  top: -12px;
+}

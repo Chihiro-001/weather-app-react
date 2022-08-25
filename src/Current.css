@@ -1,35 +1,15 @@
-.Current img {
-  position: relative;
-  top: -25px;
-  left: 20px;
+.Current button {
+  right: -210px;
+  top: -37px;
 }
-.Current .align-items-start,
-.Current .weather-detail {
-  font-size: 18px;
+.Current .input-group {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 258px;
 }
-.Current .active {
+.Current .btn-outline-secondary {
   color: white;
-  cursor: default;
-  text-decoration: none;
-}
-.Current .active:hover {
-  text-decoration: none;
-}
-.Current .current-location {
-  font-size: 30px;
-}
-.Current .current-location-info {
-  text-align: right;
-  padding: 0 30px;
-}
-.Current .current-temperature {
-  font-size: 35px;
-  font-weight: normal;
-  position: relative;
-}
-.Current small {
-  position: relative;
-  top: -12px;
+  border-color: #ced4da;
 }
 .Current .loading,
 .Current .spin {

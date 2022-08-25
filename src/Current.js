@@ -1,81 +1,69 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Current.css";
-import FormattedDate from "./FormattedDate";
 import { SpinnerCircular } from "spinners-react";
+import CurrentWeatherInfo from "./CurrentWeatherInfo";
 
-export default function Current() {
-  const [temperature, setTemperature] = useState(null);
+export default function Current(props) {
   const [weatherData, setWeatherDate] = useState({ loaded: false });
+  const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     // console.log(response.data);
-    setTemperature(Math.round(response.data.main.temp));
     setWeatherDate({
       loaded: true,
-      temperature: response.data.main.temp,
+      temperature: Math.round(response.data.main.temp),
       date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       cloudiness: response.data.clouds.all,
       humidity: response.data.main.humidity,
+      city: response.data.name,
     });
   }
-  if (weatherData.loaded) {
-    return (
-      <div className="Current">
-        <div className="row align-items-start">
-          <div className="col current-location-info">
-            {/* Current location */}
-            <ul>
-              <li className="current-location">Tokyo</li>
-              <li>
-                Date/Time:{" "}
-                <span>
-                  <FormattedDate date={weatherData.date} />
-                </span>
-              </li>
-              <li></li>
-            </ul>
-          </div>
-          <div className="col-2">
-            <img
-              src="https://openweathermap.org/img/wn/10d@2x.png"
-              className="current-weather-icon"
-              alt="current weather icon"
-            />
-          </div>
-          <div className="col-2">
-            {/* Current temperature */}
-            <div className="clearfix">
-              <span className="current-temperature float-left">
-                {temperature}
-              </span>
-              <small className="unit">
-                <span className="active float-left">°C</span>
-              </small>
-            </div>
-          </div>
-          <div className="col weather-detail">
-            {/* Current Weather Detail */}
-            <ul>
-              <li className="wind">
-                Wind: <span>{weatherData.wind}</span> m/h
-              </li>
-              <li className="cloudiness">
-                Cloudiness: <span>{weatherData.cloudiness}</span> %
-              </li>
-              <li className="humidity">
-                Humidity: <span>{weatherData.humidity}</span> %
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    );
-  } else {
-    const city = "Tokyo";
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event) {
+    event.preventDefault();
+    setCity(event.target.value);
+  }
+  function search() {
     const apiKey = "7b2471b32a9aba35093d93a82db55ee8";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+  }
+
+  if (weatherData.loaded) {
+    return (
+      <div className="Current">
+        <div className="row">
+          <div className="col input-group">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter a city"
+              />
+              <button
+                className="btn btn-outline-secondary"
+                type="button"
+                onChange={handleCityChange}
+              >
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button className="btn btn-outline-secondary" type="button">
+                <i className="fa-solid fa-location-crosshairs"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <CurrentWeatherInfo data={weatherData} />
+      </div>
+    );
+  } else {
+    search();
     return (
       <div className="Current">
         <span className="loading">

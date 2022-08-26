@@ -2,14 +2,7 @@
 .CurrentWeatherInfo .weather-detail {
   font-size: 18px;
 }
-.CurrentWeatherInfo .active {
-  color: white;
-  cursor: default;
-  text-decoration: none;
-}
-.CurrentWeatherInfo .active:hover {
-  text-decoration: none;
-}
+
 .CurrentWeatherInfo .current-location {
   font-size: 30px;
 }

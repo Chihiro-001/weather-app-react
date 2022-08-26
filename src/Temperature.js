@@ -16,6 +16,7 @@ export default function Temperature(props) {
     event.preventDefault();
     setUnit("celsius");
   }
+
   if (unit === "celsius") {
     return (
       <div className="Temperature">

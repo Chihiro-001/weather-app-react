@@ -26,3 +26,8 @@
   position: relative;
   top: -12px;
 }
+.CurrentWeatherInfo .description {
+  position: relative;
+  top: -38px;
+  right: -212px;
+}

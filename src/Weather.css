@@ -1,18 +1,18 @@
-.Current button {
+.Weather button {
   right: -210px;
   top: -37px;
 }
-.Current .input-group {
+.Weather .input-group {
   margin-top: 20px;
   margin-bottom: 0px;
   margin-left: 258px;
 }
-.Current .btn-outline-secondary {
+.Weather .btn-outline-secondary {
   color: white;
   border-color: #ced4da;
 }
-.Current .loading,
-.Current .spin {
+.Weather .loading,
+.Weather .spin {
   margin: 20px;
   margin-left: 334px;
 }

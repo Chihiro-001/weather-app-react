@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import CurrentWeatherInfo from "./CurrentWeatherInfo";
+import Forecast from "./Forecast";
 import axios from "axios";
-import "./Current.css";
+import "./Weather.css";
 import { SpinnerCircular } from "spinners-react";
 
-export default function Current(props) {
+export default function Weather(props) {
   const [weatherData, setWeatherDate] = useState({ loaded: false });
   const [city, setCity] = useState(props.defaultCity);
 
@@ -20,6 +21,7 @@ export default function Current(props) {
       city: response.data.name,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
+      coordinates: response.data.coord,
     });
   }
 
@@ -39,7 +41,7 @@ export default function Current(props) {
 
   if (weatherData.loaded) {
     return (
-      <div className="Current">
+      <div className="Weather">
         <div className="row">
           <div className="col input-group">
             <form onSubmit={handleSubmit}>
@@ -59,12 +61,15 @@ export default function Current(props) {
           </div>
         </div>
         <CurrentWeatherInfo data={weatherData} />
+        <div className="forecast">
+          <Forecast coordinates={weatherData.coordinates} />
+        </div>
       </div>
     );
   } else {
     search();
     return (
-      <div className="Current">
+      <div className="Weather">
         <span className="loading">
           Loading...
           <div className="spin">

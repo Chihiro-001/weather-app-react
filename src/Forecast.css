@@ -1,5 +1,9 @@
 .Forecast .forecast-container {
   text-align: center;
   margin: 0 auto;
-  padding: 18px;
+  padding: 20px;
+}
+.Forecast .min-temperature {
+  color: #eadb9d;
+  margin-left: 10px;
 }

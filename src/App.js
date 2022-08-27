@@ -1,6 +1,5 @@
 import React from "react";
-import Current from "./Current";
-import Forecast from "./Forecast";
+import Weather from "./Weather";
 import "./App.css";
 
 import "./App.css";
@@ -9,11 +8,8 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="weather-app today">
-          <Current defaultCity="Tokyo" />
-        </div>
-        <div className="weather-app forecast">
-          <Forecast />
+        <div className="weather-app">
+          <Weather defaultCity="Tokyo" />
         </div>
       </div>
       <footer className="github-link">

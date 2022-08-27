@@ -24,14 +24,12 @@ export default function Icons(props) {
   };
   return (
     <div className="Icons">
-      <div className="float-end">
-        <ReactAnimatedWeather
-          icon={codeMapping[props.code]}
-          color="#FFFFFF"
-          size={props.size}
-          animate={true}
-        />
-      </div>
+      <ReactAnimatedWeather
+        icon={codeMapping[props.code]}
+        color="#FFFFFF"
+        size={props.size}
+        animate={true}
+      />
     </div>
   );
 }

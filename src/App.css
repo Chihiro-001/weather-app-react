@@ -24,12 +24,15 @@ body {
   display: block;
 }
 
-.App .today {
+.App .weather-app {
   background: #887575;
   border-radius: 20px;
-  margin: 80px auto 20px;
   width: 750px;
 }
+.App .today {
+  margin: 80px auto 20px;
+}
+
 /* CSS for 6 days of weather forecast */
 .align-items-end {
   margin: 0 auto;

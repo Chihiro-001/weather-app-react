@@ -13,10 +13,7 @@ export default function CurrentWeatherInfo(props) {
           <ul>
             <li className="current-location">{props.data.city}</li>
             <li>
-              Date/Time:{" "}
-              <span>
-                <FormattedDate date={props.data.date} size={50} />
-              </span>
+              <FormattedDate date={props.data.date} size={50} />
             </li>
           </ul>
           <div className="description text-capitalize">
@@ -24,7 +21,9 @@ export default function CurrentWeatherInfo(props) {
           </div>
         </div>
         <div className="col-2">
-          <Icons code={props.data.icon} />
+          <div className="float-end">
+            <Icons code={props.data.icon} size={60} />
+          </div>
         </div>
         <div className="col-2">
           {/* Current temperature */}

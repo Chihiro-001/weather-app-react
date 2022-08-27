@@ -1,5 +1,6 @@
 import React from "react";
 import Current from "./Current";
+import Forecast from "./Forecast";
 import "./App.css";
 
 import "./App.css";
@@ -10,6 +11,9 @@ function App() {
       <div className="container">
         <div className="weather-app today">
           <Current defaultCity="Tokyo" />
+        </div>
+        <div className="weather-app forecast">
+          <Forecast />
         </div>
       </div>
       <footer className="github-link">

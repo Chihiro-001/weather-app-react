@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CurrentWeatherInfo from "./CurrentWeatherInfo";
-// import Forecast from "./Forecast";
+import Forecast from "./Forecast";
 import axios from "axios";
 import "./Weather.css";
 import { SpinnerCircular } from "spinners-react";
@@ -62,7 +62,7 @@ export default function Weather(props) {
         </div>
         <CurrentWeatherInfo data={weatherData} />
         <div className="forecast">
-          {/* <Forecast coordinates={weatherData.coordinates} /> */}
+          <Forecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );

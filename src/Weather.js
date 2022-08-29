@@ -39,6 +39,18 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  // function showCurrentLocation() {
+  //   navigator.geolocation.getCurrentPosition(function(position) {
+  //     let apiKey = "7b2471b32a9aba35093d93a82db55ee8";
+  //     let lat = position.coords.latitude;
+  //     let lon = position.coords.longitude;
+  //     let apiUrlCurrent = "https://api.openweathermap.org/geo/1.0/reverse?";
+  //     axios
+  //       .get(`${apiUrlCurrent}lat=${lat}&lon=${lon}&limit=5&appid=${apiKey}`)
+  //       .then(sendCityCoords);
+  //   });
+  // }
+
   if (weatherData.loaded) {
     return (
       <div className="Weather">
@@ -51,12 +63,16 @@ export default function Weather(props) {
                 placeholder="Enter a city"
                 onChange={handleCityChange}
               />
-              <button className="btn btn-outline-secondary" type="button">
+              <button className="btn btn-outline-secondary" type="submit">
                 <i className="fa-solid fa-magnifying-glass"></i>
               </button>
-              <button className="btn btn-outline-secondary" type="button">
+              {/* <button
+                className="btn btn-outline-secondary"
+                type="button"
+                // onClick={showCurrentLocation}
+              >
                 <i className="fa-solid fa-location-crosshairs"></i>
-              </button>
+              </button> */}
             </form>
           </div>
         </div>

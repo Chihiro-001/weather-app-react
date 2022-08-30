@@ -24,3 +24,23 @@
   top: -18px;
   right: -212px;
 }
+@media (min-width: 576px) and (max-width: 767px) {
+  .CurrentWeatherInfo .description {
+    right: -121px;
+  }
+}
+@media (max-width: 575px) {
+  .CurrentWeatherInfo .description {
+    right: 0px;
+  }
+  .CurrentWeatherInfo .current-location-info {
+    text-align: center;
+  }
+  .CurrentWeatherInfo .weather-detail {
+    text-align: center;
+  }
+  .CurrentWeatherInfo .temp-container {
+    text-align: center;
+    padding-bottom: 7px;
+  }
+}

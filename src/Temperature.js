@@ -19,7 +19,7 @@ export default function Temperature(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="Temperature">
+      <div className="Temperature temp-container">
         <span className="current-temperature float-left">
           {Math.round(props.celsius)}
         </span>
@@ -38,7 +38,7 @@ export default function Temperature(props) {
           {Math.round(fahrenheit())}
         </span>
         <small className="unit">
-          <span className="active float-left"> ℉ </span> |
+          <span className="active float-left"> °F </span> |
           <a href="/" onClick={convertToCelsius}>
             °C
           </a>

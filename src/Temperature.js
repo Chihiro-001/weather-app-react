@@ -19,7 +19,7 @@ export default function Temperature(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="Temperature temp-container">
+      <div className="Temperature">
         <span className="current-temperature float-left">
           {Math.round(props.celsius)}
         </span>

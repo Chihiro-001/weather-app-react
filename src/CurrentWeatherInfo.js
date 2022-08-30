@@ -8,7 +8,7 @@ export default function CurrentWeatherInfo(props) {
   return (
     <div className="CurrentWeatherInfo">
       <div className="row align-items-start">
-        <div className="col-sm current-location-info">
+        <div className="col-sm-4 current-location-info">
           {/* Current location */}
           <ul>
             <li className="current-location">{props.data.city}</li>
@@ -25,15 +25,17 @@ export default function CurrentWeatherInfo(props) {
             <Icons code={props.data.icon} size={60} />
           </div>
         </div>
-        <span className="temp-container">
-          <div className="col-sm-2">
+
+        <div className="col-sm-2">
+          <span className="temp-container">
             {/* Current temperature */}
             <div className="clearfix">
               <Temperature celsius={props.data.temperature} />
             </div>
-          </div>
-        </span>
-        <div className="col-sm weather-detail">
+          </span>
+        </div>
+
+        <div className="col-sm-4 weather-detail">
           {/* Current Weather Detail */}
           <ul>
             <li className="wind">

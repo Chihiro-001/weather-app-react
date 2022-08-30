@@ -15,7 +15,7 @@ body {
   border-radius: 20px;
   margin: 0 auto;
   margin-top: 5rem;
-  /* width: 750px; */
+  width: 750px;
 }
 .App ul {
   list-style: none;
@@ -27,6 +27,7 @@ body {
   margin: 0 auto;
   margin-top: 20px;
   color: #887575;
+  width: 750px;
 }
 @media (max-width: 575px) {
   .App footer {

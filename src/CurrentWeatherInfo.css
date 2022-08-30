@@ -22,13 +22,13 @@
 .CurrentWeatherInfo .description {
   position: relative;
   top: -18px;
-  right: -212px;
+  /* right: -212px; */
 }
-@media (min-width: 576px) and (max-width: 767px) {
+/* @media (min-width: 576px) and (max-width: 767px) {
   .CurrentWeatherInfo .description {
     right: -121px;
   }
-}
+} */
 @media (max-width: 575px) {
   .CurrentWeatherInfo .description {
     right: 0px;

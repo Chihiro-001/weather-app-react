@@ -16,7 +16,6 @@
   margin: 20px;
   margin-left: 334px;
 }
-
 @media (max-width: 575px) {
   .Weather .input-group {
     margin-left: 27px;

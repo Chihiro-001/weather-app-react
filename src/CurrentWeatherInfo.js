@@ -26,7 +26,6 @@ export default function CurrentWeatherInfo(props) {
           </div>
         </div>
         <span className="temp-container">
-          {" "}
           <div className="col-sm-2">
             {/* Current temperature */}
             <div className="clearfix">

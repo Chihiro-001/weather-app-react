@@ -9,33 +9,33 @@ body {
     rgb(255, 255, 231) 100.2%
   );
 }
-
+.App .weather-app {
+  align-items: center;
+  background: #887575;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  /* width: 750px; */
+}
 .App ul {
   list-style: none;
   padding: 0;
 }
 .App footer {
+  align-items: center;
   font-size: 15px;
-  color: #887575;
   margin: 0 auto;
   margin-top: 20px;
-  margin-bottom: 20px;
-  width: 750px;
-  display: block;
+  color: #887575;
 }
-
-.App .weather-app {
-  background: #887575;
-  border-radius: 20px;
-  margin: 80px auto 20px;
-  width: 750px;
-}
-
 @media (max-width: 575px) {
   .App footer {
     width: 300px;
   }
   .App .weather-app {
+    width: 300px;
+  }
+  .App footer {
     width: 300px;
   }
 }

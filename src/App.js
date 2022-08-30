@@ -11,22 +11,22 @@ function App() {
         <div className="weather-app">
           <Weather defaultCity="Courtenay" />
         </div>
+        <footer className="github-link">
+          Thank you for visiting my React.js weather app!
+          <div>
+            This project was coded by Chihiro Ismail, and is
+            <a
+              href="https://github.com/Chihiro-001/weather-app-react"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              open-sourced on GitHub
+            </a>{" "}
+            hosted on Netlify.
+          </div>
+        </footer>
       </div>
-      <footer className="github-link">
-        Thank you for visiting my React.js weather app!
-        <div>
-          This project was coded by Chihiro Ismail, and is
-          <a
-            href="https://github.com/Chihiro-001/weather-app-react"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            open-sourced on GitHub
-          </a>{" "}
-          hosted on Netlify.
-        </div>
-      </footer>
     </div>
   );
 }

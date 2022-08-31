@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import "./Temperature.css";
+import React from "react";
 
-export default function Temperature(props) {
+// Testing the unit conversion
+export default function DisplayALl() {
+  // Using Temperature.js
   const [unit, setUnit] = useState("celsius");
 
   function convertToFahrenheit(event) {
     event.preventDefault();
     setUnit("fahrenheit");
   }
-
   function fahrenheit() {
     return (props.celsius * 9) / 5 + 32;
   }
@@ -19,15 +19,15 @@ export default function Temperature(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="Temperature">
+      <div className="DisplayAll">
+        {/* Need to integrate other external components here */}
+        {/* If unit is set to celsius */}
+
         <span className="current-temperature float-left">
           {Math.round(props.celsius)}
         </span>
         <small className="unit">
-          <span className="active float-left" id="active-unit-celsius">
-            °C
-          </span>{" "}
-          |{" "}
+          <span className="active float-left">°C</span> |{" "}
           <a href="/" onClick={convertToFahrenheit}>
             ℉
           </a>
@@ -36,16 +36,13 @@ export default function Temperature(props) {
     );
   } else {
     return (
-      <div className="Temperature">
+      <div className="DisplayAll">
+        {/* If unit is set to conversion */}
         <span className="current-temperature float-left">
           {Math.round(fahrenheit())}
         </span>
         <small className="unit">
-          <span className="active float-left" id="active-unit-fahrenheit">
-            {" "}
-            °F{" "}
-          </span>{" "}
-          |
+          <span className="active float-left"> °F </span> |
           <a href="/" onClick={convertToCelsius}>
             °C
           </a>
